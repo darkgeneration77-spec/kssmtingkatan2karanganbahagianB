@@ -1,0 +1,59 @@
+{
+  "title": "KSSM Tingkatan 2 Bahasa Melayu - Bahagian B",
+  "purpose": "Peta pembelajaran karangan mengikut tema dan fokus soalan",
+  "learningModel": ["Kenal pasti kata tugas", "Kenal pasti fokus dan sasaran", "Rancang isi", "Isi-Huraian-Contoh-Kesan", "Pendahuluan", "Penanda wacana", "Penutup", "Tulis sendiri", "Semak", "Banding dengan contoh", "Latihan pemindahan"],
+  "themes": [
+    {"id":"kesihatan","name":"Kesihatan dan Gaya Hidup Sihat","zh":"健康与健康生活","questions":[
+      {"id":1,"title":"Langkah-langkah Penjagaan Kesihatan","focus":"langkah-langkah","status":"ready","page":"soalan1-gaya-hidup-sihat.html"},
+      {"id":2,"title":"Cara-cara Mengamalkan Gaya Hidup Sihat","focus":"cara-cara","status":"planned"},
+      {"id":3,"title":"Kepentingan Menjaga Kesihatan","focus":"kepentingan","status":"planned"},
+      {"id":4,"title":"Kesan Tidak Mengamalkan Gaya Hidup Sihat","focus":"kesan","status":"planned"}
+    ]},
+    {"id":"alam-sekitar","name":"Alam Sekitar","zh":"环境","questions":[
+      {"title":"Langkah-langkah Menjaga Alam Sekitar","focus":"langkah-langkah"},
+      {"title":"Cara-cara Mengurangkan Pencemaran Alam","focus":"cara-cara"},
+      {"title":"Kepentingan Menjaga Kebersihan Alam Sekitar","focus":"kepentingan"},
+      {"title":"Faedah Amalan Kitar Semula","focus":"faedah"}
+    ]},
+    {"id":"pendidikan","name":"Pendidikan dan Pembelajaran","zh":"教育与学习","questions":[
+      {"title":"Cara-cara Menjadi Murid Cemerlang","focus":"cara-cara"},
+      {"title":"Langkah-langkah Meningkatkan Prestasi Pelajaran","focus":"langkah-langkah"},
+      {"title":"Faedah Belajar Secara Berkumpulan","focus":"faedah"},
+      {"title":"Kepentingan Membaca","focus":"kepentingan"}
+    ]},
+    {"id":"keluarga","name":"Keluarga","zh":"家庭","questions":[
+      {"title":"Cara-cara Mengeratkan Hubungan Kekeluargaan","focus":"cara-cara"},
+      {"title":"Peranan Ibu Bapa Membentuk Keluarga Bahagia","focus":"peranan"},
+      {"title":"Faedah Melakukan Aktiviti Bersama Keluarga","focus":"faedah"}
+    ]},
+    {"id":"masyarakat","name":"Masyarakat dan Amalan Baik","zh":"社会与良好习惯","questions":[
+      {"title":"Cara-cara Memupuk Semangat Kejiranan","focus":"cara-cara"},
+      {"title":"Kepentingan Amalan Gotong-royong","focus":"kepentingan"},
+      {"title":"Faedah Amalan Tolong-menolong","focus":"faedah"}
+    ]},
+    {"id":"keselamatan","name":"Keselamatan","zh":"安全","questions":[
+      {"title":"Langkah-langkah Menjaga Keselamatan Diri","focus":"langkah-langkah"},
+      {"title":"Cara-cara Menjaga Keselamatan di Jalan Raya","focus":"cara-cara"},
+      {"title":"Langkah-langkah Mencegah Kemalangan","focus":"langkah-langkah"}
+    ]},
+    {"id":"teknologi","name":"Sains, Teknologi dan Internet","zh":"科技与网络","questions":[
+      {"title":"Faedah Penggunaan Internet dalam Pembelajaran","focus":"faedah"},
+      {"title":"Cara-cara Menggunakan Internet Secara Berhemah","focus":"cara-cara"},
+      {"title":"Kesan Penggunaan Gajet Secara Berlebihan","focus":"kesan"}
+    ]},
+    {"id":"sukan","name":"Sukan dan Riadah","zh":"运动与休闲","questions":[
+      {"title":"Faedah Bersukan","focus":"faedah"},
+      {"title":"Cara-cara Menggalakkan Remaja Bersukan","focus":"cara-cara"},
+      {"title":"Kepentingan Aktiviti Riadah","focus":"kepentingan"}
+    ]},
+    {"id":"pelancongan","name":"Pelancongan","zh":"旅游","questions":[
+      {"title":"Faedah Melancong dalam Negara","focus":"faedah"},
+      {"title":"Cara-cara Menggalakkan Pelancongan Domestik","focus":"cara-cara"},
+      {"title":"Kepentingan Industri Pelancongan","focus":"kepentingan"}
+    ]}
+  ],
+  "assessmentAlignment": {
+    "target":"Penguasaan penulisan yang relevan, gramatis, matang, menarik dan berkesan",
+    "checks":["idea relevan","pengolahan idea","ayat gramatis","wacana sesuai mengikut konteks","kosa kata dan sistem bahasa","kesinambungan idea"]
+  }
+}
