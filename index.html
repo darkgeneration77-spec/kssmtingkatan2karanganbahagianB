@@ -1,81 +1,103 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KSSM Tingkatan 2 Bahasa Melayu | Bahagian B</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Form 2 Bahasa Melayu 长篇作文系统</title>
 <style>
-:root{--bg:#f5f7fb;--card:#fff;--ink:#172033;--muted:#667085;--line:#e6eaf2;--blue:#315efb;--blue2:#eaf0ff;--green:#0f9f6e;--purple:#7057d9}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif;background:linear-gradient(180deg,#edf3ff 0,#f7f9fc 340px,#f5f7fb 100%);color:var(--ink)}
-.wrap{max-width:1180px;margin:auto;padding:28px 18px 64px}.hero{background:linear-gradient(135deg,#193a9d,#315efb 56%,#7994ff);color:#fff;border-radius:28px;padding:34px;box-shadow:0 24px 70px rgba(49,94,251,.18)}
-.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.86}.hero h1{font-size:clamp(32px,5vw,54px);line-height:1.05;margin:10px 0}.hero p{max-width:800px;line-height:1.7;color:#eef3ff}.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.pill{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.26);padding:8px 12px;border-radius:999px;font-size:14px;font-weight:700}
-.section{margin-top:34px}.section h2{font-size:26px;margin:0 0 8px}.lead{color:var(--muted);margin:0 0 16px;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 10px 28px rgba(16,24,40,.05)}
-.card h3{margin:0 0 8px}.card p{color:var(--muted);line-height:1.65}.num{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--blue2);color:var(--blue);font-weight:900;margin-bottom:14px}.topic{display:flex;flex-direction:column;min-height:250px}.topic .meta{font-size:13px;color:var(--muted);margin-bottom:8px}.topic h3{font-size:21px}.topic ul{padding-left:18px;color:#475467;line-height:1.7}.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--blue);color:#fff;padding:11px 15px;border-radius:12px;font-weight:800;margin-top:auto}.btn.secondary{background:#edf1fb;color:#25438e}.progress{height:9px;border-radius:999px;background:#edf0f6;overflow:hidden;margin:12px 0 6px}.bar{height:100%;width:0;background:linear-gradient(90deg,#315efb,#0f9f6e)}
-.lock{opacity:.56}.footer{margin-top:42px;text-align:center;color:#98a2b3;font-size:13px}.tagrow{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 14px}.tag{font-size:12px;padding:5px 8px;border-radius:999px;background:#f1f4f9;color:#526071;font-weight:700}
-@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.grid{grid-template-columns:1fr}.hero{padding:26px 22px}}
+:root{--bg:#f7f5ef;--card:#fff;--ink:#1f2937;--muted:#667085;--line:#ded9cc;--accent:#315f72;--accent2:#8a5a44;--soft:#eef3f4;--warn:#fff7e8}
+*{box-sizing:border-box} body{margin:0;font-family:"Noto Sans SC","Microsoft YaHei",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{text-decoration:none;color:inherit}.wrap{max-width:1120px;margin:auto;padding:28px 18px 60px}
+.hero{background:linear-gradient(135deg,#fff 0%,#eef3f4 100%);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 10px 28px rgba(0,0,0,.06)}
+.eyebrow{font-size:.83rem;font-weight:800;letter-spacing:.08em;color:var(--accent);text-transform:uppercase}.hero h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.1;margin:.4rem 0 1rem}.hero p{max-width:760px;color:var(--muted);font-size:1.05rem}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.badge{padding:8px 12px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:.88rem;font-weight:700}
+.section-title{margin:34px 0 14px;font-size:1.45rem}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;min-height:170px;box-shadow:0 5px 14px rgba(0,0,0,.04)}
+.card h3{margin:8px 0 6px;font-size:1.08rem}.card p{margin:0;color:var(--muted);font-size:.93rem}.num{width:38px;height:38px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent)}
+.card.active{outline:2px solid #c5d5d9}.card.active:hover{transform:translateY(-2px)}.status{font-size:.75rem;font-weight:800;color:var(--accent2);margin-top:12px}
+.path{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:16px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center;font-weight:800;font-size:.9rem}.arrow{color:var(--muted)}
+.footer{margin-top:40px;color:var(--muted);font-size:.85rem;text-align:center}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.path{grid-template-columns:1fr}.arrow{display:none}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding:22px}.wrap{padding:18px 12px 40px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<section class="hero">
-  <div class="eyebrow">KSSM Tingkatan 2 · Bahasa Melayu</div>
-  <h1>Bahagian B<br>Karangan Learning Hub</h1>
-  <p>从审题、找 Isi、扩写段落到独立完成作文。重点马来文关键词直接植入华语，让学生知道自己在写什么，而不是背完整篇后遇到换题就当场失忆。</p>
-  <div class="stats"><span class="pill">30 markah</span><span class="pill">≥ 180 patah perkataan</span><span class="pill">BM + 华语关键词</span><span class="pill">逐步写作训练</span></div>
-</section>
+  <section class="hero">
+    <div class="eyebrow">KSSM Tingkatan 2 Bahasa Melayu</div>
+    <h1>长篇作文应变系统</h1>
+    <p>不是背几十篇范文，而是训练学生看懂题目、判断题型、选最安全的一题，再调用正确骨架和主题内容。</p>
+    <div class="badges"><span class="badge">视觉学习</span><span class="badge">可打印</span><span class="badge">可离线保存</span><span class="badge">手机 / 平板 / 电脑</span></div>
+  </section>
 
-<section class="section">
-  <h2>学习路线</h2>
-  <p class="lead">每一道作文统一走同一套流程，学生会形成稳定的写作习惯。</p>
-  <div class="grid">
-    <div class="card"><div class="num">1</div><h3>Kenal Pasti Soalan</h3><p>找出 <b>Kata Tugas（题目指令）</b>、Fokus、Sasaran 和 Jenis Karangan。</p></div>
-    <div class="card"><div class="num">2</div><h3>Cari Isi</h3><p>从题目资料、图片和关键词整理核心 <b>Isi（内容点）</b>。</p></div>
-    <div class="card"><div class="num">3</div><h3>Bina Perenggan</h3><p>统一练习 <b>Isi → Huraian → Contoh → Kesan</b>。</p></div>
-    <div class="card"><div class="num">4</div><h3>Pendahuluan & Penutup</h3><p>学会稳定、自然、不会偏题的开头与结尾结构。</p></div>
-    <div class="card"><div class="num">5</div><h3>Tulis Sendiri</h3><p>学生自己完成不少于 180 patah perkataan 的完整作文。</p></div>
-    <div class="card"><div class="num">6</div><h3>Semak & Baiki</h3><p>检查内容发展、tatabahasa、ejaan、imbuhan 与 penanda wacana。</p></div>
+  <h2 class="section-title">考试处理路线</h2>
+  <div class="path">
+    <div class="step">1. 看 Tema<br><small>主题</small></div>
+    <div class="step">2. 找 Kata Tugas<br><small>任务词</small></div>
+    <div class="step">3. 判 Jenis<br><small>作文类型</small></div>
+    <div class="step">4. 定 Kehendak<br><small>真正要回答什么</small></div>
+    <div class="step">5. 选最安全的一题<br><small>三选一</small></div>
   </div>
-</section>
 
-<section class="section">
-  <h2>Tema 作文主题</h2>
-  <p class="lead">网站会按主题持续扩充。先把第一题做成完整标准模板，再复制系统，而不是每一页都重新发明一种人类苦难。</p>
+  <h2 class="section-title">Phase 1｜写作引擎</h2>
   <div class="grid">
-    <article class="card topic">
-      <div class="meta">TEMA 01 · KESIHATAN</div>
-      <h3>Gaya Hidup Sihat</h3>
-      <div class="tagrow"><span class="tag">Langkah-langkah</span><span class="tag">Tidak Berformat</span><span class="tag">30 markah</span></div>
-      <ul><li>审题与 Kata Tugas</li><li>4 个核心 Isi</li><li>IHCK 扩写训练</li><li>完整参考作文</li></ul>
-      <div class="progress"><div class="bar" style="width:100%"></div></div>
-      <a class="btn" href="soalan1-gaya-hidup-sihat.html">开始学习</a>
-    </article>
-
-    <article class="card topic lock">
-      <div class="meta">TEMA 02 · ALAM SEKITAR</div>
-      <h3>Alam Sekitar</h3>
-      <p>将加入 penjagaan alam sekitar、pencemaran、kitar semula 等题型。</p>
-      <a class="btn secondary" href="#">即将加入</a>
-    </article>
-
-    <article class="card topic lock">
-      <div class="meta">TEMA 03 · PENDIDIKAN</div>
-      <h3>Pendidikan</h3>
-      <p>将加入 kecemerlangan murid、amalan membaca、persediaan peperiksaan 等题型。</p>
-      <a class="btn secondary" href="#">即将加入</a>
-    </article>
+    <a class="card active" href="module01.html"><div class="num">01</div><h3>审题与选题</h3><p>Tema、Kata Tugas、Jenis、Kehendak Soalan、三选一判断。</p><div class="status">已建立</div></a>
+    <a class="card active" href="module02.html"><div class="num">02</div><h3>Pengalaman</h3><p>时间线、事件发展、高潮、感受与启示。</p><div class="status">已建立</div></a>
+    <a class="card active" href="module03.html"><div class="num">03</div><h3>Cerita / Sambung Cerita</h3><p>接住人物、地点、时间、情境和叙述人称。</p><div class="status">已建立</div></a>
+    <a class="card active" href="module04.html"><div class="num">04</div><h3>Fakta / Pendapat</h3><p>Isi → Huraian → Contoh → Kesan → Penegasan。</p><div class="status">已建立</div></a>
+    <a class="card active" href="module05.html"><div class="num">05</div><h3>Surat</h3><p>正式与非正式书信格式骨架。</p><div class="status">已建立</div></a>
+    <a class="card active" href="module06.html"><div class="num">06</div><h3>Laporan</h3><p>标题、活动资料、过程、结果、署名。</p><div class="status">已建立</div></a>
+    <a class="card active" href="module07.html"><div class="num">07</div><h3>Ucapan / Syarahan / Ceramah</h3><p>称呼、开场、论点、结束语。</p><div class="status">已建立</div></a>
+    <a class="card active" href="module08.html"><div class="num">08</div><h3>其他格式</h3><p>Rencana、Berita、Wawancara、Dialog、Catatan。</p><div class="status">已建立</div></a>
   </div>
-</section>
 
-<section class="section">
-  <h2>后续主题规划</h2>
+  <h2 class="section-title">Phase 2｜Tema Isi Bank</h2>
   <div class="grid">
-    <div class="card"><h3>Keluarga & Masyarakat</h3><p>家庭关系、邻里、社会责任、互助与良好价值观。</p></div>
-    <div class="card"><h3>Teknologi & Keselamatan</h3><p>科技使用、网络安全、道路安全与日常防范。</p></div>
-    <div class="card"><h3>Sukan, Riadah & Pelancongan</h3><p>运动、休闲、旅游及相关 langkah / faedah / kepentingan 题型。</p></div>
+    <a class="card active" href="theme01.html"><div class="num">T1</div><h3>Diri & Remaja</h3><p>自我与青少年｜自律、时间管理、阅读、目标、良好习惯</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme02.html"><div class="num">T2</div><h3>Keluarga</h3><p>家庭｜关系、责任、关爱、共同活动、尊重</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme03.html"><div class="num">T3</div><h3>Sekolah & Pendidikan</h3><p>学校与教育｜纪律、学习、课外活动、环境、责任</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme04.html"><div class="num">T4</div><h3>Kesihatan</h3><p>健康｜饮食、运动、休息、卫生、情绪</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme05.html"><div class="num">T5</div><h3>Alam Sekitar</h3><p>环境｜清洁、污染、回收、节约、社区行动</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme06.html"><div class="num">T6</div><h3>Teknologi & Internet</h3><p>科技与网络｜学习、沟通、资讯、网络安全、节制使用</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme07.html"><div class="num">T7</div><h3>Sukan & Rekreasi</h3><p>运动与休闲｜健康、团队合作、纪律、减压、善用时间</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme08.html"><div class="num">T8</div><h3>Keselamatan</h3><p>安全｜道路、学校、个人与网络安全</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme09.html"><div class="num">T9</div><h3>Masyarakat & Kejiranan</h3><p>社会与邻里｜关怀、合作、睦邻、社区活动、互助</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme10.html"><div class="num">T10</div><h3>Perpaduan</h3><p>团结｜互相尊重、共同活动、文化理解、合作、和谐</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme11.html"><div class="num">T11</div><h3>Patriotisme</h3><p>爱国｜国庆、国家象征、守法、贡献、珍惜和平</p><div class="status">已建立</div></a>
+    <a class="card active" href="theme12.html"><div class="num">T12</div><h3>Nilai Murni</h3><p>品德｜责任、合作、尊重、诚实、关爱</p><div class="status">已建立</div></a>
   </div>
-</section>
 
-<div class="footer">KSSM Tingkatan 2 Bahasa Melayu · Bahagian B Learning Website</div>
+
+  <h2 class="section-title">Phase 3｜同一 Tema 多题型转换</h2>
+  <div class="grid">
+    <a class="card active" href="phase3.html"><div class="num">P3</div><h3>转换训练中心</h3><p>同一批 Isi 转成 Pengalaman、Fakta、Pendapat 与 Berformat。</p><div class="status">已完成</div></a>
+    <a class="card active" href="transform01.html"><div class="num">01</div><h3>Gotong-royong</h3><p>清洁活动主题跨题型转换。</p><div class="status">已完成</div></a>
+    <a class="card active" href="transform02.html"><div class="num">02</div><h3>Sukan</h3><p>运动主题跨题型转换。</p><div class="status">已完成</div></a>
+    <a class="card active" href="transform03.html"><div class="num">03</div><h3>Kesihatan</h3><p>健康主题跨题型转换。</p><div class="status">已完成</div></a>
+    <a class="card active" href="transform04.html"><div class="num">04</div><h3>Teknologi</h3><p>科技主题跨题型转换。</p><div class="status">已完成</div></a>
+    <a class="card active" href="transform05.html"><div class="num">05</div><h3>Alam Sekitar</h3><p>环境主题跨题型转换。</p><div class="status">已完成</div></a>
+    <a class="card active" href="transform06.html"><div class="num">06</div><h3>Perpaduan</h3><p>团结主题跨题型转换。</p><div class="status">已完成</div></a>
+  </div>
+
+  <h2 class="section-title">Phase 4｜考试决策与规划</h2>
+  <div class="grid">
+    <a class="card active" href="phase4.html"><div class="num">P4</div><h3>三选一决策</h3><p>10 分评分法，选择最稳、最有内容、离题风险最低的一题。</p><div class="status">已完成</div></a>
+    <a class="card active" href="planning.html"><div class="num">PL</div><h3>限时 Planning</h3><p>审题、3 个 Isi、结尾方向，先搭骨架再动笔。</p><div class="status">已完成</div></a>
+    <a class="card active" href="checklist.html"><div class="num">CK</div><h3>交卷检查</h3><p>题意、格式、人称、段落、语言与重复内容。</p><div class="status">已完成</div></a>
+  </div>
+
+  <h2 class="section-title">Phase 5｜Bahagian B 模拟实战</h2>
+  <div class="grid">
+    <a class="card active" href="phase5.html"><div class="num">P5</div><h3>模拟训练中心</h3><p>6 套同主题三选一练习，先选题再完整写。</p><div class="status">已完成</div></a>
+    <a class="card active" href="set01.html"><div class="num">S1</div><h3>Kebersihan Sekolah</h3><p>Pengalaman / Fakta / Laporan。</p><div class="status">已完成</div></a>
+    <a class="card active" href="set02.html"><div class="num">S2</div><h3>Gaya Hidup Sihat</h3><p>Pengalaman / Pendapat / Syarahan。</p><div class="status">已完成</div></a>
+    <a class="card active" href="set03.html"><div class="num">S3</div><h3>Teknologi</h3><p>Pengalaman / Fakta / Surat。</p><div class="status">已完成</div></a>
+    <a class="card active" href="set04.html"><div class="num">S4</div><h3>Sukan</h3><p>Pengalaman / Fakta / Laporan。</p><div class="status">已完成</div></a>
+    <a class="card active" href="set05.html"><div class="num">S5</div><h3>Alam Sekitar</h3><p>Pengalaman / Fakta / Ucapan。</p><div class="status">已完成</div></a>
+    <a class="card active" href="set06.html"><div class="num">S6</div><h3>Perpaduan</h3><p>Pengalaman / Pendapat / Rencana。</p><div class="status">已完成</div></a>
+    <a class="card active" href="answer-guide.html"><div class="num">TG</div><h3>教师指南</h3><p>如何使用整套系统、观察重点与补救方式。</p><div class="status">已完成</div></a>
+  </div>
+
+  <div class="footer">Form 2 BM Karangan System · Version 6 · Phase 1–5 Complete</div>
 </div>
 </body>
 </html>
